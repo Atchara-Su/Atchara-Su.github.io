@@ -165,22 +165,20 @@
               employee =localStorage.getItem('employee')
               emp =  eval(employee)
               emp_tb = document.getElementById('emp_table').getElementsByTagName('tbody')[0]
-            if(emp != null){
+              if (emp != null) {
                 for (let i of emp){
-                row = emp_tb.insertRow()
-                cell1 = row.insertCell()
-                cell2 = row.insertCell()
-                cell1.innerHTML = i.empid
-                cell2.innerHTML = i.empname
-                //document.getElementById('output').innerHTML +=i.empid + ' ' + i.empname +'<br>'
+                    row = emp_tb.insertRow()
+                    cell1 = row.insertCell()
+                    cell2 = row.insertCell()
+                    cell1.innerHTML = i.empid
+                    cell2.innerHTML = i.empname
+                    //document.getElementById('output').innerHTML += i.empid + ' ' + i.empname + '<br>'
+                } 
+            } else {
+                document.getElementById('output').innerHTML = 'ไม่พบข้อมูลพนักงาน'
             }
-        } else{
-            document.getElementById('output').innerHTML = "ไม่พบข้อมูลพนักงาน"
         }
-            
-    }
-
-      </script>
+    </script>
 </body>
 
 </html>
